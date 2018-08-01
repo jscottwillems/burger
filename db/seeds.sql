@@ -1,5 +1,5 @@
-INSERT INTO burgers (burger_name, devoured)
-VALUES ("Double Butt Buster", true)
-, ("The Veggie Wedgie", false)
-, ("The Artery Clogger", true)
+INSERT INTO burgers (burger_name)
+VALUES ("Double Butt Buster")
+, ("The Veggie Wedgie")
+, ("The Artery Clogger")
 ;
