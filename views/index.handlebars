@@ -1,4 +1,38 @@
-Setup the `index.handlebars` to have the template that Handlebars can render onto.
+<h1>Eat Da Burger</h1>
 
+<h2>To Be Eaten</h2>
 
-<button class="submitBtn" type="submit">Submit</button>
+<ul>
+  {{#each burgers}}
+    {{#unless devoured}}
+      {{> burgers/burger-block devoured = true}}
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Digesting</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#if devoured}}
+      <li>{{burger_name}}</li>
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Add a Burger</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="burg">Burger Name:</label>
+    <input type="text" id="burg" name="burger_name">
+  </div>
+
+  <div class="form-group">
+    <label for="devo">Devoured?</label><br>
+    <input type="radio" name="devoured" value="0" checked> To Be Eaten<br>
+    <input type="radio" name="devoured" value="1"> Devoured
+  </div>
+
+  <button type="submit">Add Burger</button>
+</form>
