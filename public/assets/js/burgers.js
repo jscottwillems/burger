@@ -1,5 +1,5 @@
 $(function() {
-    $(".change-devoured").on("click", function(event) {
+    $("#change-devoured").on("click", function(event) {
         var id = $(this).data("id");
         var newDevoured = $(this).data("newdevoured");
 
@@ -37,7 +37,7 @@ $(function() {
         );
     });
 
-    $(".delete").on("click", function(event) {
+    $("#delete").on("click", function(event) {
         event.preventDefault();
 
         var burgerID = $(this).data("id");
